@@ -1,0 +1,7 @@
+{
+  "name": "eximsimple",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
