@@ -1,25 +1,30 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RefresherCustomEvent } from '@ionic/angular';
 import { MessageComponent } from '../message/message.component';
 
 import { DataService, Message } from '../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage  implements OnInit{
   private data = inject(DataService);
+  public getmsgs$!: Observable<Message[]>;
   constructor() {}
 
-  refresh(ev: any) {
-    setTimeout(() => {
-      (ev as RefresherCustomEvent).detail.complete();
-    }, 3000);
+  ngOnInit() {
+      this.getmsgs$ = this.data.getMessages();
   }
+  //refresh(ev: any) {
+  //  setTimeout(() => {
+  //    (ev as RefresherCustomEvent).detail.complete();
+  //  }, 30000);
+  //}
 
-  getMessages(): Message[] {
-    return this.data.getMessages();
-  }
+  //getMessages(): Observable<Message[]> {
+  //  return this.data.getMessages();
+  //}
 }

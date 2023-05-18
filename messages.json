@@ -1,0 +1,14 @@
+[
+    {
+        "fromName": "Matt Chorsey",
+        "subject": "New event: Trip to Vegas",
+        "id": 0,
+        "read": false
+    },
+    {
+        "fromName": "Harry Potter",
+        "subject": "New event: Trip to Hoswagger",
+        "id": 1,
+        "read": false
+    }
+]
