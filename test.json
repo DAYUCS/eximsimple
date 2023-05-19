@@ -1,0 +1,208 @@
+{
+  "uuid": "802162f2-e907-4eab-bbcc-cdcc991468d2",
+  "lastMigration": 27,
+  "name": "Test",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "436fa476-3368-49d0-9665-5e80187e46c3",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "9cea74a8-f0fc-4bab-b659-81238504bcd9",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "94978bed-2b9b-41fe-a8cf-61594bdf008d",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "messages",
+      "responses": [
+        {
+          "uuid": "64ff65b2-f9b7-41c8-9cb3-e5e2ed34b573",
+          "body": "[\r\n    {\r\n        \"fromName\": \"China Construction Bank\",\r\n        \"subject\": \"EXLC202300000001\",\r\n        \"id\": 0,\r\n        \"date\": \"20230519\",\r\n        \"read\": false,\r\n        \"buyerBank\": \"BNP Paribas\",\r\n        \"sellerBank\": \"Bank of China\",\r\n        \"applicant\": \"IBM\",\r\n        \"beneficiary\": \"Chinasystems\"\r\n    },\r\n    {\r\n        \"fromName\": \"JPMorgan Chase\",\r\n        \"subject\": \"IMLC202300001002\",\r\n        \"id\": 1,\r\n        \"date\": \"20230518\",\r\n        \"read\": false,\r\n        \"buyerBank\": \"Agricultural Bank of China\",\r\n        \"sellerBank\": \"Citigroup Inc.\",\r\n        \"applicant\": \"Chinasystems\",\r\n        \"beneficiary\": \"Oracle\"\r\n    }\r\n]",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "",
+              "value": ""
+            },
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "7177b91c-ce51-4feb-820e-dce553e8f518",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "messages/0",
+      "responses": [
+        {
+          "uuid": "0f37aacf-689b-4a8c-bd3f-9e02585ad34d",
+          "body": "{\r\n        \"fromName\": \"China Construction Bank\",\r\n        \"subject\": \"EXLC202300000001\",\r\n        \"id\": 0,\r\n        \"date\": \"20230519\",\r\n        \"read\": false,\r\n        \"buyerBank\": \"BNP Paribas\",\r\n        \"sellerBank\": \"Bank of China\",\r\n        \"applicant\": \"IBM\",\r\n        \"beneficiary\": \"Chinasystems\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "20731296-22b7-4b6b-a83b-06be213dd75e",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "messages/1",
+      "responses": [
+        {
+          "uuid": "18b80947-0408-462b-b93e-70d82c260ec8",
+          "body": "{\r\n        \"fromName\": \"JPMorgan Chase\",\r\n        \"subject\": \"IMLC202300001002\",\r\n        \"id\": 1,\r\n        \"date\": \"20230518\",\r\n        \"read\": false,\r\n        \"buyerBank\": \"Agricultural Bank of China\",\r\n        \"sellerBank\": \"Citigroup Inc.\",\r\n        \"applicant\": \"Chinasystems\",\r\n        \"beneficiary\": \"Oracle\"\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "436fa476-3368-49d0-9665-5e80187e46c3"
+    },
+    {
+      "type": "route",
+      "uuid": "94978bed-2b9b-41fe-a8cf-61594bdf008d"
+    },
+    {
+      "type": "route",
+      "uuid": "7177b91c-ce51-4feb-820e-dce553e8f518"
+    },
+    {
+      "type": "route",
+      "uuid": "20731296-22b7-4b6b-a83b-06be213dd75e"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

@@ -8,6 +8,10 @@ export interface Message {
   date: string;
   id: number;
   read: boolean;
+  buyerBank: string;
+  sellerBank: string;
+  applicant: string;
+  beneficiary: string;
 }
 
 @Injectable({

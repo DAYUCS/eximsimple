@@ -1,14 +1,24 @@
 [
     {
-        "fromName": "Matt Chorsey",
-        "subject": "New event: Trip to Vegas",
+        "fromName": "China Construction Bank",
+        "subject": "EXLC202300000001",
         "id": 0,
-        "read": false
+        "date": "20230519",
+        "read": false,
+        "buyerBank": "BNP Paribas",
+        "sellerBank": "Bank of China",
+        "applicant": "IBM",
+        "beneficiary": "Chinasystems"
     },
     {
-        "fromName": "Harry Potter",
-        "subject": "New event: Trip to Hoswagger",
+        "fromName": "JPMorgan Chase",
+        "subject": "IMLC202300001002",
         "id": 1,
-        "read": false
+        "date": "20230518",
+        "read": false,
+        "buyerBank": "Agricultural Bank of China",
+        "sellerBank": "Citigroup Inc.",
+        "applicant": "Chinasystems",
+        "beneficiary": "Oracle"
     }
 ]
