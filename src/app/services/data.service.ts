@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { environment } from '../../environments/environment';
+
 export interface Message {
   fromName: string;
   subject: string;
@@ -22,10 +24,10 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   public getMessages(): Observable<Message[]> {
-    return this.http.get<Message[]>('http://localhost:3000/messages');
+    return this.http.get<Message[]>(`${environment.baseUrl}`);
   }
 
   public getMessageById(id: number): Observable<Message> {
-    return this.http.get<Message>(`http://localhost:3000/messages/${id}`);
+    return this.http.get<Message>(`${environment.baseUrl}/${id}`);
   }
 }
